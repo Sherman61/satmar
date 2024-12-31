@@ -1,0 +1,27 @@
+{
+  "name": "satmar_inventory",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\"",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "lint": "eslint ./src --ext .js,.jsx",
+    "postinstall": "npm install --prefix backend && npm install --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "eslint": "^8.30.0",
+    "kill-port": "^2.0.1",
+    "nodemon": "^3.1.9"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cardinal": "^2.0.0",
+    "react-barcode": "^1.5.3"
+  }
+}
